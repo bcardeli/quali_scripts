@@ -37,7 +37,7 @@ carbon_leaf=3.0
 dwood=0.52
 
 def lai(sla,carbon_stem, dwood,carbon_leaf,krp,k1):
-  diam = ((4 + (carbon_stem)) / ((dwood) * 3.14 * 40)) ** (1/(2+0.5))
+  diam = ((4 * (carbon_stem)) / ((dwood) * 3.14 * 40)) ** (1/(2+0.5))
   crown_area=k1*(diam**krp)
   lai=carbon_leaf*sla/crown_area  
   return lai
